@@ -18,8 +18,8 @@ const Select = () => {
   const { region } = useSelector((state) => state.region);
   const dispatch = useDispatch();
 
-  const handleChange = (e) => {
-    dispatch(setRegion(e));
+  const handleChange = (value) => {
+    dispatch(setRegion(value));
   };
 
   return (

@@ -23,7 +23,7 @@ const Searchbar = () => {
 
   return (
     <div className="z-50 w-full sm:w-80">
-      <Combobox onChange={(e) => navigate(e)}>
+      <Combobox onChange={(value) => navigate(value)}>
         <div className="relative mt-1">
           <div className="relative w-full text-left bg-white rounded shadow cursor-default dark:bg-darkElement sm:text-sm">
             <Combobox.Input
@@ -31,7 +31,7 @@ const Searchbar = () => {
               displayValue={(country) => country.name}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search for country..."
-              autoComplete="false"
+              autoComplete="off"
             />
             <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
               <img src={isDarkMode ? darkDown : lightDown} alt="" />
