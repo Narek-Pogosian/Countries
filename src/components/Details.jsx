@@ -22,7 +22,9 @@ const Details = () => {
         <BackButton />
       </div>
       {!country ? (
-        <p>Not country</p>
+        <p className="text-xl font-bold text-center dark:text-white">
+          Country not found
+        </p>
       ) : (
         <div className="gap-20 lg:flex lg:justify-between">
           <div className="w-full mb-4 shadow h-fit md:flex-1">

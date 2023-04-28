@@ -5,6 +5,7 @@ import { fetchCountries } from "./redux/countriesSlice";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Details from "./components/Details";
+import NoPage from "./components/NoPage";
 
 const App = () => {
   const { isDarkMode } = useSelector((state) => state.darkMode);
@@ -22,6 +23,7 @@ const App = () => {
           <Routes>
             <Route index element={<Home />} />
             <Route path="/:id" element={<Details />} />
+            <Route path="*" element={<NoPage />} />
           </Routes>
         </div>
       </div>
