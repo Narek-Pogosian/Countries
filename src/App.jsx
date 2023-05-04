@@ -10,7 +10,7 @@ import NoPage from "./components/NoPage";
 const App = () => {
   const { isDarkMode } = useSelector((state) => state.darkMode);
   const dispatch = useDispatch();
-
+  console.log(localStorage.getItem("darkMode"));
   useEffect(() => {
     dispatch(fetchCountries());
   }, []);
